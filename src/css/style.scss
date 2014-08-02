@@ -37,18 +37,18 @@ time, mark, audio, video {
 	-moz-box-sizing: border-box;
 }
 ::-webkit-input-placeholder { /* WebKit browsers */
-    color:    #fff;
+    color:    #333;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    #fff;
+    color:    #333;
     opacity:  1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    #fff;
+    color:    #333;
     opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:    #fff;
+    color:    #333;
 }
 .clearfix:after {
   content: "";
@@ -137,16 +137,49 @@ table {
 	width: 1130px;
 	background: url(../../images/markup/bg-content.png) top center no-repeat;
 }
+.wrap-widgets {
+	min-height: 1120px;
+}
 .block {
-	min-height: 1400px;
+	min-height: 1300px;
 	float: left;
 	width: 340px;
-	padding: 140px 5px 0 90px;
+	padding: 140px 5px 0 92px;
 }
-.center-block {
+.index__link {
+	display: block;
+	height: 180px;
+	margin: 0 auto;
+	width: 370px;
+}
+.content-block {
 	width: 450px;
+	padding: 90px 0 0 25px;
+}
+.last-block {
+	padding: 140px 0 0 0px;
+	width: 255px;
+	.ad-block {
+		padding-top: 40px;
+	}
+}
+.btn-simple {
+	display: block;
+	margin: 0 auto;
+	width: 169px;
+	height: 39px;
+	font-size: 11px;
+	font-family: Verdana, sans-serif;
+	color: #333;
+	padding: 14px 0;
+	text-align: center;
+	background: url(../../images/markup/btn-simple-bg.png) no-repeat;
 }
 /*general widget styles*/
+.widget {
+	font-family: 'PTSansNarrowRegular';
+	margin-bottom: 40px;
+}
 .widget__header {
 	background: url(../../images/markup/widget-header-bg.png) top center no-repeat;
 	text-align: center;
@@ -166,19 +199,12 @@ table {
 }
 .spacer {
 	width: 236px;
-	margin: 0 auto;
+	margin: 10px auto;
 	height: 2px;
 	background: url(../../images/markup/w-spacer-bg.png) ;
 }
 /*status widget*/
 .w-status {
-	font-family: 'PTSansNarrowRegular';
-	&__header {
-
-	}
-	&__list {
-		padding-bottom: 10px;
-	}
 	&__item {
 		padding-left: 85px;
 		border-bottom: 2px solid #cabead;
@@ -192,5 +218,141 @@ table {
 		color: #630;
 		padding: 25px 0;
 		font-size: 18px;
+	} 
+}
+.w-forum {
+	&__item {
+		padding: 0 0 5px 15px;
+		margin: 10px 0;
+		border-bottom: 2px solid #cabead;
+		&:last-child {
+			border: none;
+		}
+		strong {
+			display: block;
+			font-size: 18px;
+			color: #630;
+		}
+		p {
+			color: #666;
+			font-size: 11px;
+		}
+		&__author {
+			color: #666;
+			padding: 0 5px;
+			text-decoration: underline;
+		}
+	}
+}
+/*Content styles*/
+.content {
+	&__list {
+		margin-bottom: 10px;
+	}
+	&__header {
+		font-family: 'PTSansNarrowRegular';
+		font-size: 18px;
+		color: #630;
+		text-align: center;
+		margin: 5px 0 15px 0;
+	}
+	&__post {
+		&__more {
+			width: 185px;
+			height: 155px;
+			float: left;
+			margin-right: 10px;
+			img {
+				margin-bottom: 10px;
+				border: 1px solid #dfd2cd; /* 3-gold*/
+				outline: 1px solid #b75f39;/*2*/
+				box-shadow: 0 0 0 1px #ffffce;/* 1*/
+			}
+		}
+		&__text {
+			width: 225px;
+			float: left;
+			text-align: left;
+			line-height: 14px;
+			padding-right: 10px;
+		}
+	}
+}
+.pagination {
+	margin: 20px 0;
+	text-align: center;
+	&__item {
+		margin: 0 10px;
+		display: inline-block;
+	}
+	&__link {
+		display: block;
+		padding: 4px;
+		width: 21px;
+		height: 21px;
+		background: url(../../images/markup/pagination-item-bg.png) no-repeat;
+	}
+}
+.cab {
+	padding: 0 20px 0 13px;
+	margin-bottom: 10px;
+	&__label {
+		display: block;
+		color: #333;
+		font-size: 11px;
+		margin: 2px 0;
+	}
+	&__input {
+		border: none;
+		color: #333;
+		text-transform: uppercase;
+		padding: 8px;
+		width: 100%;
+		height: 28px;
+		font-size: 11px;
+		border-radius: 5px;
+		outline: none;
+		background: url(../../images/markup/cab-input-bg.png);
+		background-size: 100% 100%;
+	}
+}
+.top {
+	&__list {
+		padding: 0 15px;
+		margin-bottom: 20px;
+	}
+	&__item {
+		padding: 0 5px;
+		text-align: right;
+		font-size: 18px;
+		margin: 5px 0 10px 0;
+		color: #333;
+		border-bottom: 1px solid #877e74;
+	}
+	&__count {
+		float: left;
+		color: #333;
+	}
+	&__nickname {
+		color: #333;
+	}
+}
+footer {
+	padding: 30px 0 10px 0;
+	.copyright {
+		text-align: center;
+	}
+}
+.ad-block {
+	min-height: 95px;
+	text-align: center;
+	&__list {
+		text-align: center;
+		margin: 10px 0;
+		img {
+			border: 1px solid #afa69a;
+			width: 88px;
+			height: 31px;
+		}
 	}
 }
