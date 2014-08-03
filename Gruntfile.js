@@ -57,7 +57,7 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    style: 'expanded'
+                    style: 'compressed'
                 },
                 files: {
                     'src/css/build/style.css': 'src/css/style.scss'

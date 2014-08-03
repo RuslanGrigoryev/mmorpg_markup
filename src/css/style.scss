@@ -108,14 +108,32 @@ table {
 	border-spacing: 0;
 }
 .main-menu {
-	padding: 30px 0;
+	padding: 21px 0 6px 0;
 	&__list {
 		float: left;
-		margin: 0 110px 0 60px;
+		margin: 0 20px 0 10px;
 	}
 	&__link {
 		color: #2f2f32;
+		position: relative;
 		display: block;
+		padding: 10px 85px 10px 55px;
+		span {
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: url(../../images/markup/light.png) no-repeat;
+		}
+		&:hover {
+			color: #000;
+		}
+		&:hover span {
+			opacity: 1;
+			background: url(../../images/markup/light.png) 0px -44px no-repeat;
+		}
 	}
 }
 .main-btn {
@@ -206,17 +224,20 @@ table {
 /*status widget*/
 .w-status {
 	&__item {
-		padding-left: 85px;
 		border-bottom: 2px solid #cabead;
-		background: url(../../images/markup/widget-status-list-bg.png) 12px center no-repeat;
+		background: url(../../images/markup/light-status.png) repeat-x;
 		&:last-child {
 			border: none;
 		}
+		&:hover {
+			background: url(../../images/markup/light-status.png) 0px -70px repeat-x;
+		}
 	}
 	&__link {
+		background: url(../../images/markup/widget-status-list-bg.png) 12px center no-repeat;
 		display: block;
 		color: #630;
-		padding: 25px 0;
+		padding: 25px 0 25px 85px;
 		font-size: 18px;
 	} 
 }
@@ -272,7 +293,7 @@ table {
 		&__text {
 			width: 225px;
 			float: left;
-			text-align: left;
+			text-align: left;	
 			line-height: 14px;
 			padding-right: 10px;
 		}
@@ -281,7 +302,7 @@ table {
 .pagination {
 	margin: 20px 0;
 	text-align: center;
-	&__item {
+	&__item { 
 		margin: 0 10px;
 		display: inline-block;
 	}
