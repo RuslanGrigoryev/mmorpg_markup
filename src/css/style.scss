@@ -138,7 +138,7 @@ table {
 	background: url(../../images/markup/bg-content.png) top center no-repeat;
 }
 .wrap-widgets {
-	min-height: 1120px;
+	height: 1150px;
 }
 .block {
 	min-height: 1300px;
@@ -288,9 +288,13 @@ table {
 	&__link {
 		display: block;
 		padding: 4px;
+		color: #333;
 		width: 21px;
 		height: 21px;
 		background: url(../../images/markup/pagination-item-bg.png) no-repeat;
+		&:hover {
+			color: #333;
+		}
 	}
 }
 .cab {

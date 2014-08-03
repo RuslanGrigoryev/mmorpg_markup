@@ -159,7 +159,7 @@ table {
 }
 
 .wrap-widgets {
-  min-height: 1120px;
+  height: 1150px;
 }
 
 .block {
@@ -317,9 +317,13 @@ table {
 .pagination__link {
   display: block;
   padding: 4px;
+  color: #333;
   width: 21px;
   height: 21px;
   background: url(../../images/markup/pagination-item-bg.png) no-repeat;
+}
+.pagination__link:hover {
+  color: #333;
 }
 
 .cab {
